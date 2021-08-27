@@ -102,4 +102,6 @@ void main()
         scanf("%c", &ch);
 
     } while (ch == 'y' || ch == 'Y');
+    printf("\nThanks for using... Have a great day! :)");
+    line();
 }
