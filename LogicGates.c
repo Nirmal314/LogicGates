@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "line.h"
 int not(int i);
 int and (int i, int j);
@@ -16,12 +17,20 @@ void main()
     switch (s1)
     {
     case 1:
-            line();
-            printf("\n");
+        line();
+        printf("\n");
         printf("Enter first input A = ");
         scanf("%d", &a);
         printf("Enter first input B = ");
         scanf("%d", &b);
+        if ((a != 0 && a != 1) || (b != 0 && b != 1))
+        {
+            printf("\n");
+            line();
+            printf("\n\nYou can enter either 1 or 0.\nYou need to rerun the program :/\n\n");
+            line();
+            exit(0);
+        }
         do
         {
             line();
