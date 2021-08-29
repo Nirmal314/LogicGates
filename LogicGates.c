@@ -12,8 +12,11 @@ void main()
     int s, s1;
     int a, b;
     char ch;
-    printf("\n\nDo you want to enter inputs by your own on want truth tables for required logic gates?\n\n1. Inputs\n2. Only truth table.\n\nEnter your choice : ");
+    line();
+    printf("\nDo you want to enter inputs by your own on want truth tables for required logic gates?\n\n1. Inputs\n2. Only truth table.\n\nEnter your choice : ");
     scanf("%d", &s1);
+    printf("\n");
+    line();
     switch (s1)
     {
     case 1:
@@ -21,7 +24,7 @@ void main()
         printf("\n");
         printf("Enter first input A = ");
         scanf("%d", &a);
-        printf("Enter first input B = ");
+        printf("Enter second input B = ");
         scanf("%d", &b);
         if ((a != 0 && a != 1) || (b != 0 && b != 1))
         {
