@@ -1,2 +1,2 @@
 # LogicGates
-Here is all the functions for 5 logic gates AOI gates and universal gates. It has 2 inputs that means 4 combinations will be there for 0 and 1. If it can be more extended do let me know :)
+Here is a program for 5 logic gates, AOI gates and 2 universal gates. It has 2 inputs(except not gate which has only 1 input) that means 4 combinations (for not gate 2 cominations) will be there for 0 and 1, you can either see results by entering inputs by your own or the whole truth table of all the possible combinations (right now only 4 combinations). If anything can be added too ...do let me know. :)
