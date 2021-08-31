@@ -2,30 +2,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "line.h"
-int not(int i);
-int and (int i, int j);
-int or (int i, int j);
-int nand(int i, int j);
-int nor(int i, int j);
+
+int not(int);
+int and (int, int);
+int or (int, int);
+int nand(int, int);
+int nor(int, int);
+
 void out();
 void input();
 void perticulerGate(int, int);
 int askUser();
 void combGate();
+
 int a, b;
+
 void main()
 {
     int s1;
     char ask;
+
     line();
     printf("\nDo you want to enter inputs by your own on want truth tables for required logic gates?\n\n1. Inputs\n2. Only truth table.\n\nEnter your choice : ");
     scanf("%d", &s1);
     printf("\n");
     line();
+
     if (s1 == 1)
     {
         input();
         perticulerGate(a, b);
+
         while (1)
         {
             printf("Want to enter new inputs? : ");
@@ -45,10 +52,18 @@ void main()
             }
         }
     }
-    else
+
+    else if (s1 == 2)
     {
         combGate();
     }
+    else
+    {
+        printf("\nInvalid entry... you can choose from 1 and 2 only.\n");
+        line();
+        exit(0);
+    }
+
     line();
     printf("\nThanks for using... Have a great day! :)\n");
     line();
@@ -61,22 +76,27 @@ int not(int i)
     else
         return 0;
 }
+
 int and (int i, int j)
 {
     return (i && j);
 }
+
 int or (int i, int j)
 {
     return (i || j);
 }
+
 int nand(int i, int j)
 {
     return not(and(i, j));
 }
+
 int nor(int i, int j)
 {
     return not(or (i, j));
 }
+
 void out()
 {
     printf("\n");
@@ -85,6 +105,7 @@ void out()
     line();
     exit(0);
 }
+
 void input()
 {
     line();
@@ -98,6 +119,7 @@ void input()
         out();
     }
 }
+
 void perticulerGate(int a, int b)
 {
     int s;
@@ -154,8 +176,10 @@ void combGate()
         scanf("%d", &s);
         printf("\n");
         line();
+
         switch (s)
         {
+
         case 1:
             printf("\n");
             for (int j = 0; j <= 1; j++)
@@ -164,6 +188,7 @@ void combGate()
             }
             printf("\n");
             break;
+
         case 2:
             printf("\n");
             for (int i = 0; i <= 1; i++)
@@ -175,6 +200,7 @@ void combGate()
             }
             printf("\n");
             break;
+
         case 3:
             printf("\n");
             for (int i = 0; i <= 1; i++)
@@ -186,6 +212,7 @@ void combGate()
             }
             printf("\n");
             break;
+
         case 4:
             printf("\n");
             for (int i = 0; i <= 1; i++)
@@ -197,6 +224,7 @@ void combGate()
             }
             printf("\n");
             break;
+
         case 5:
             printf("\n");
             for (int i = 0; i <= 1; i++)
@@ -208,6 +236,7 @@ void combGate()
             }
             printf("\n");
             break;
+
         default:
             printf("\n");
             printf("Invalid entry\n");
