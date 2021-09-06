@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include "line.h"
 
@@ -28,8 +27,9 @@ void main()
     printf("\n");
     line();
 
-    if (s1 == 1)
+    switch (s1)
     {
+    case 1:
         input();
         perticulerGate(a, b);
 
@@ -51,14 +51,11 @@ void main()
                 exit(0);
             }
         }
-    }
 
-    else if (s1 == 2)
-    {
+    case 2:
         combGate();
-    }
-    else
-    {
+
+    default:
         printf("\nInvalid entry... you can choose from 1 and 2 only.\n");
         line();
         exit(0);
