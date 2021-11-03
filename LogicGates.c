@@ -2,20 +2,24 @@
 #include <stdlib.h>
 #include "line.h"
 
+/*Functions of basic gates*/
 int not(int);
 int and (int, int);
 int or (int, int);
 int nand(int, int);
 int nor(int, int);
 
+/*Some other obvious functions*/
 void out();
 void input();
 void perticulerGate(int, int);
 int askUser();
 void combGate();
 
+/*2 Inputs as global variable*/
 int a, b;
 
+/*Driver code*/
 void main()
 {
     int s1;
@@ -94,6 +98,7 @@ int nor(int i, int j)
     return not(or (i, j));
 }
 
+/*To exit the program*/
 void out()
 {
     printf("\n");
@@ -103,6 +108,7 @@ void out()
     exit(0);
 }
 
+/*To take input from user*/
 void input()
 {
     line();
@@ -117,6 +123,7 @@ void input()
     }
 }
 
+/*Case for perticuler gate*/
 void perticulerGate(int a, int b)
 {
     int s;
@@ -160,6 +167,7 @@ void perticulerGate(int a, int b)
     } while (ch == 'y' || ch == 'Y');
 }
 
+/*For whole truth table*/
 void combGate()
 {
     int s;
